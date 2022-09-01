@@ -10,5 +10,5 @@ an easy Counter developed using javascript, you can add or subtract numbers usin
 
 ## Feedback
 
-If you have any feedback, please reach me out  at lscocchi@gmail.com
+If you have any feedback, please reach me out  at lscocchi@gmail.com .
 
