@@ -35,14 +35,24 @@
     }
   
   
+
+
+
+    
   .up {
     animation: up 0.5s ease;
     position: relative;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-delay: 1s;
   }
   
   .down {
     animation: down 0.5s ease;
     position: relative;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-delay: 1s;
   }
   
   @keyframes up {

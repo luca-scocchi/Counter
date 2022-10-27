@@ -1,38 +1,22 @@
 
 
 
-let container = document.querySelector(".container");
-let counter = document.createElement("div");
-counter.id = "counter" ;
-counter.innerHTML = "0";
-counter.classList.add("counter");
-container.appendChild(counter);
-
-let btnContainer = document.createElement("div");
-container.appendChild(btnContainer);
-let btnDecrease = document.createElement("button");
-btnDecrease.id = "decrease" ;
-btnDecrease.classList.add("btn");
-btnContainer.appendChild(btnDecrease);
-btnDecrease.innerHTML = "-" ;
-
-let btnReset = document.createElement("button");
-btnReset.id = "reset" ;
-btnReset.classList.add("btn");
-btnContainer.appendChild(btnReset);
-btnReset.innerHTML = "reset" ;
-
-let btnIncrease = document.createElement("button");
-btnIncrease.id = "increase" ;
-btnIncrease.classList.add("btn");
-btnContainer.appendChild(btnIncrease);
-btnIncrease.innerHTML = "+" ;
-
-
-
-
-
-
+function spawn_element(parentNode, tagName, id, classes, style, innerHtml, clickEvent) {
+    var el = document.createElement(tagName);
+    if (id) el.id = id;
+    if (classes) classes.forEach(c => el.classList.add(c));
+    if (style) el.style = style;
+    if (innerHtml) el.innerHTML = innerHtml;
+    if (clickEvent) el.addEventListener("click", clickEvent);
+    parentNode.appendChild(el);
+    return el;
+}
+let container = document.querySelector(".container")
+let newElement = spawn_element(container, "div", "counter", ["counter"], null, "0" );
+let btnContainer = spawn_element(container, "div", );
+let btnDecrease = spawn_element(btnContainer, "button","decrease", ["btn"], null,"-");
+let btnReset = spawn_element(btnContainer, "button","btnReset", ["btn"], null,"reset");
+let btnIncrease = spawn_element(btnContainer, "button","increase", ["btn"], null,"+");
 
 
 
